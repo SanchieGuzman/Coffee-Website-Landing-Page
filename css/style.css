@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 4rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  color: white;
+  background-color: black;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 40%;
+  top: 0;
+  z-index: 1000;
+}
+
+header .nav-logo {
+  position: relative;
+  left: 1rem;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-weight: bold;
+}
+head ul li {
+  color: white;
+}
+
+.hero-section {
+  height: 64vh;
+  background-image: url("../images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  height: 63.5vh;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-section h1 {
+  color: white;
+  z-index: 2;
+}
+
+.content {
+  height: auto;
+  padding: 3rem 10% 3rem 15%;
+  display: flex;
+  gap: 2rem;
+}
+
+.content .side-content {
+  border-right: 1px solid rgb(0, 0, 0);
+  padding-right: 2rem;
+  width: 27%;
+  align-self: flex-start;
+}
+
+.content .side-content ul {
+  list-style-type: none;
+}
+
+.content .side-content > ul > li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.content .side-content > ul h2 {
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.content .side-content ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.content .side-content ul li > ul li {
+  padding-bottom: 0.9rem;
+  font-size: 0.8rem;
+}
+
+.content .main-content .top-container h2 {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.content .main-content .top-container p {
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+  line-height: 1.2rem;
+}
+
+.content .main-content .mid-container {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.content .main-content .mid-container p {
+  padding-top: 1.2rem;
+  font-weight: bold;
+}
+
+.content .main-content .mid-container img {
+  width: 50%;
+}
+
+.content .main-content .bottom-container {
+  display: grid;
+  padding-top: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, auto);
+  gap: 1rem;
+}
+
+.content .main-content .bottom-container section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .main-content .bottom-container section.hovered::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.537);
+  z-index: 1;
+  border-radius: 1rem;
+}
+
+.content .main-content .bottom-container section img {
+  width: 100%;
+  position: relative;
+}
+
+.content .main-content .bottom-container section p {
+  display: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  width: 70%;
+  color: white;
+  z-index: 2;
+  animation: label-animation 0.3s linear;
+}
+
+@keyframes label-animation {
+  0% {
+    transform: translateY(-1rem);
+  }
+  80% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.content .main-content .bottom-container section p span {
+  color: #01aef1;
+}
+
+.call-to-action {
+  background-image: url("../images/wood.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+  padding: 3rem 14%;
+}
+
+.call-to-action h2 {
+  color: white;
+}
+
+.call-to-action input {
+  height: 3rem;
+  width: 30%;
+  padding: 1rem;
+}
+
+.call-to-action input.sign-up-button {
+  height: 3rem;
+  width: 10%;
+  background-color: #01aef1;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+footer {
+  height: 54vh;
+  background-color: black;
+  padding: 3rem 15% 3rem 10%;
+  color: white;
+}
+
+footer .footer-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+footer .footer-content img {
+  width: 80%;
+}
+
+footer .footer-content section h3 {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+footer .footer-content section p {
+  font-size: 0.9rem;
+}
+
+footer .footer-content section ul {
+  list-style-type: none;
+}
+
+footer .footer-content section ul li {
+  font-size: 0.8rem;
+  padding-bottom: 0.7rem;
+}
+
+footer .footer-content section ul li a {
+  text-decoration: none;
+  color: gray;
+}
+
+footer .socials {
+  padding: 1rem;
+  display: flex;
+  justify-content: start;
+}
+
+footer .socials i {
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+
+footer .corp-name {
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+footer .corp-name span {
+  color: white;
+}
